@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Security+ SY0-701 Performance Based Questions</title>
-    <meta name="description" content="Twelve interactive performance based questions to prepare for the CompTIA Security+ SY0-701 exam." />
+    <meta name="description" content="Interactive performance based questions to prepare for the CompTIA Security+ SY0-701 exam." />
+    <link rel="stylesheet" href="assets/css/text-scale.css" />
     <style>
       :root {
         --navy: #0d2137;
@@ -24,7 +25,9 @@
         margin: 0;
         color: var(--ink);
         background: var(--paper);
-        font: 15px/1.45 "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: calc(16px * var(--scale-body, 1) * var(--scale-all, 1));
+        line-height: 1.5;
       }
       a { color: var(--info); }
       :focus-visible {
@@ -43,14 +46,14 @@
       }
       .brand {
         margin: 0;
-        font-size: 15px;
+        font-size: calc(17px * var(--scale-h1, 1) * var(--scale-all, 1));
         font-weight: 700;
         color: #fff;
         letter-spacing: .04em;
       }
       .brand small { font-weight: 500; color: #9db4cc; margin-left: 8px; letter-spacing: 0; }
       .spacer { flex: 1; }
-      .topbar a { color: #9db4cc; font-size: 13px; text-decoration: none; }
+      .topbar a { color: #b7c9dd; font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1)); text-decoration: none; }
       .topbar a:hover { color: #fff; text-decoration: underline; }
 
       .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 48px; }
@@ -64,7 +67,7 @@
         margin-bottom: 28px;
         box-shadow: 0 1px 2px rgba(13, 33, 55, .06);
       }
-      .intro h2 { margin: 0 0 8px; font-size: 17px; }
+      .intro h2 { margin: 0 0 8px; font-size: calc(19px * var(--scale-h2, 1) * var(--scale-all, 1)); }
       .intro p { margin: 8px 0 0; max-width: 72ch; }
       .intro p:first-of-type { margin-top: 0; }
       .intro ul { margin: 10px 0 0; padding-left: 18px; }
@@ -72,7 +75,7 @@
 
       h3.domain {
         margin: 28px 0 12px;
-        font-size: 13px;
+        font-size: calc(14px * var(--scale-h3, 1) * var(--scale-all, 1));
         letter-spacing: .06em;
         text-transform: uppercase;
         color: var(--muted);
@@ -105,17 +108,17 @@
       }
       .card h4 {
         margin: 0 0 8px;
-        font-size: 15px;
+        font-size: calc(17px * var(--scale-h4, 1) * var(--scale-all, 1));
         color: var(--navy);
       }
       .card p {
         margin: 0 0 12px;
-        font-size: 14px;
+        font-size: calc(16px * var(--scale-prose, 1) * var(--scale-all, 1));
         color: var(--muted);
       }
       .card .go {
         margin-top: auto;
-        font-size: 13px;
+        font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1));
         font-weight: 650;
         color: var(--info);
       }
@@ -128,7 +131,7 @@
         border-radius: 999px;
         background: var(--gold);
         border: 1px solid #e6d69a;
-        font-size: 11px;
+        font-size: calc(13px * var(--scale-small, 1) * var(--scale-all, 1));
         letter-spacing: .05em;
         text-transform: uppercase;
         color: #6b5713;
@@ -138,8 +141,32 @@
         margin-top: 36px;
         padding-top: 14px;
         border-top: 1px solid var(--line);
-        font-size: 13px;
+        font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1));
         color: var(--muted);
+      }
+      .card.soon {
+        background: #f7f9fb;
+        border-style: dashed;
+        color: var(--muted);
+      }
+      .card.soon h4 { color: #33404e; }
+      .card.soon .go { color: var(--muted); }
+      .card.soon .go::after { content: ""; }
+      .card.soon .tag { background: #e8edf3; border-color: #cfd6de; color: #33404e; }
+      .skip {
+        position: absolute;
+        left: -999px;
+        top: 8px;
+        background: var(--white);
+        color: var(--navy);
+        padding: 8px 12px;
+        border-radius: 6px;
+        z-index: 10;
+      }
+      .skip:focus { left: 8px; }
+      @media (prefers-reduced-motion: reduce) {
+        .card { transition: none; }
+        .card:hover, .card:focus-visible { transform: none; }
       }
 
       @media (max-width: 520px) {
@@ -149,113 +176,119 @@
   </head>
 
   <body>
+    <a class="skip" href="#main">Skip to exercises</a>
     <header class="topbar" role="banner">
       <h1 class="brand">Security+ SY0-701 <small>Performance Based Questions</small></h1>
       <span class="spacer"></span>
       <a href="https://github.com/devurandom11/Security-Plus-PBQs">View on GitHub</a>
     </header>
 
-    <div class="wrap">
-      <section class="intro">
-        <h2>Twelve practice PBQs</h2>
+    <main id="main" class="wrap">
+      <section class="intro" aria-labelledby="introTitle">
+        <h2 id="introTitle">Practice PBQs</h2>
         <p>
           Each one gives you a job at Northwind, a company that does not exist, with a scenario
-          to read, exhibits to dig through, and fields to fill in. They work the way the
-          performance based questions on the SY0-701 exam do.
+          to read and a task to complete. They work the way the performance based questions on
+          the SY0-701 exam do. One exercise is open now; the rest are being reworked and will
+          open as they are ready.
         </p>
         <ul>
-          <li>Yellow fields count toward the score. Gray ones are already set.</li>
+          <li>Every scored placement or field is yellow until you fill it.</li>
           <li>You get three attempts at each one.</li>
           <li>Everything runs in your browser. Each exercise is one HTML file, and it never sends anything to a server.</li>
         </ul>
       </section>
 
-      <h3 class="domain">General Security Concepts</h3>
+      <h3 class="domain">Available now</h3>
       <div class="grid">
-        <a class="card" href="pki-chain.html">
-          <span class="tag">Certificates</span>
-          <h4>PKI and Certificate Validation</h4>
-          <p>The certificate store here has eight exports in it, printed the way <code>openssl x509 -text</code> prints them. Build the chains, then work out which certificates are no good as of the date in the title bar.</p>
-          <span class="go">Start</span>
-        </a>
-      </div>
-
-      <h3 class="domain">Threats, Vulnerabilities and Mitigations</h3>
-      <div class="grid">
-        <a class="card" href="attack-mitigation-match.html">
-          <span class="tag">Matching</span>
-          <h4>Attack and Mitigation Matching</h4>
-          <p>Seven findings from an internal assessment, one dropdown each. A technique can be the answer twice, and some are the answer for nothing, so ticking them off as you go will lead you wrong.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="ticketing-system.html">
-          <span class="tag">Help desk</span>
-          <h4>Help Desk Ticket Triage</h4>
-          <p>A Tier 1 tech has already touched all five of these tickets. Say what actually happened on each one, what was pulled on the user, and what would have stopped it.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="system-hardening.html">
-          <span class="tag">Hardening</span>
-          <h4>Server Hardening Baseline</h4>
-          <p>NW-APP-12 failed its baseline audit, and the auditor attached the config extract behind every finding. Read those, then pick the fix that goes in the hardening plan.</p>
-          <span class="go">Start</span>
-        </a>
-      </div>
-
-      <h3 class="domain">Security Architecture</h3>
-      <div class="grid">
-        <a class="card" href="firewall-rules.html">
-          <span class="tag">Firewall ACL</span>
-          <h4>Firewall Access Control List</h4>
-          <p>Build the ACL for a new campus perimeter firewall: source, destination, port, protocol, action. Watch the dropdowns. Not every value they offer is one this firewall supports.</p>
-          <span class="go">Start</span>
-        </a>
         <a class="card" href="network-diagram.html">
           <span class="tag">Network design</span>
           <h4>Secure Network Design</h4>
-          <p>A site drawing arrives with eight empty control slots. Fill them, put each system in a zone, then decide which zones can open sessions to which.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="wireless-hardening.html">
-          <span class="tag">Wireless</span>
-          <h4>Enterprise Wireless Hardening</h4>
-          <p>The controller has just been rebuilt and all three SSIDs are blank. Set authentication, encryption, EAP, and the network controls sitting behind them.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="bcdr-planning.html">
-          <span class="tag">Resilience</span>
-          <h4>Resilience and Recovery Planning</h4>
-          <p>Four systems that do not all matter equally. Pick backup storage and a recovery site for each, inside a fixed annual budget, against RTO and RPO targets you do not get to change.</p>
+          <p>A site drawing arrives with seven empty slots. Drag the right security device into each one, then place two servers in the correct network segments.</p>
           <span class="go">Start</span>
         </a>
       </div>
 
-      <h3 class="domain">Security Operations</h3>
+      <h3 class="domain">Coming soon &mdash; General Security Concepts</h3>
       <div class="grid">
-        <a class="card" href="log-analysis.html">
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Certificates</span>
+          <h4>PKI and Certificate Validation</h4>
+          <p>The certificate store here has eight exports in it, printed the way <code>openssl x509 -text</code> prints them. Build the chains, then work out which certificates are no good as of the date in the title bar.</p>
+          <span class="go">Coming soon</span>
+        </div>
+      </div>
+
+      <h3 class="domain">Coming soon &mdash; Threats, Vulnerabilities and Mitigations</h3>
+      <div class="grid">
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Matching</span>
+          <h4>Attack and Mitigation Matching</h4>
+          <p>Seven findings from an internal assessment, one dropdown each. A technique can be the answer twice, and some are the answer for nothing, so ticking them off as you go will lead you wrong.</p>
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Help desk</span>
+          <h4>Help Desk Ticket Triage</h4>
+          <p>A Tier 1 tech has already touched all five of these tickets. Say what actually happened on each one, what was pulled on the user, and what would have stopped it.</p>
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Hardening</span>
+          <h4>Server Hardening Baseline</h4>
+          <p>NW-APP-12 failed its baseline audit, and the auditor attached the config extract behind every finding. Read those, then pick the fix that goes in the hardening plan.</p>
+          <span class="go">Coming soon</span>
+        </div>
+      </div>
+
+      <h3 class="domain">Coming soon &mdash; Security Architecture</h3>
+      <div class="grid">
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Firewall ACL</span>
+          <h4>Firewall Access Control List</h4>
+          <p>Build the ACL for a new campus perimeter firewall: source, destination, port, protocol, action. Watch the dropdowns. Not every value they offer is one this firewall supports.</p>
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Wireless</span>
+          <h4>Enterprise Wireless Hardening</h4>
+          <p>The controller has just been rebuilt and all three SSIDs are blank. Set authentication, encryption, EAP, and the network controls sitting behind them.</p>
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
+          <span class="tag">Resilience</span>
+          <h4>Resilience and Recovery Planning</h4>
+          <p>Four systems that do not all matter equally. Pick backup storage and a recovery site for each, inside a fixed annual budget, against RTO and RPO targets you do not get to change.</p>
+          <span class="go">Coming soon</span>
+        </div>
+      </div>
+
+      <h3 class="domain">Coming soon &mdash; Security Operations</h3>
+      <div class="grid">
+        <div class="card soon" aria-disabled="true">
           <span class="tag">Log analysis</span>
           <h4>Security Log Analysis</h4>
           <p>Someone has pulled five log sources onto the analyst jump host. They all describe the same intrusion. Read them in the console and answer what happened.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="ids-alert-triage.html">
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
           <span class="tag">SOC triage</span>
           <h4>Alert Triage and Tuning</h4>
           <p>Eight alerts are waiting in the IDS queue. Say what each detection was and what you do with it, tune the two rules making the most noise, and pick the one you escalate first.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="incident-response-order.html">
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
           <span class="tag">Incident response</span>
           <h4>Incident Response Process</h4>
           <p>Put the seven steps in the order the process actually runs. Then take eight actions out of a ransomware after-action package and say which step each one belonged to.</p>
-          <span class="go">Start</span>
-        </a>
-        <a class="card" href="auth-methods.html">
+          <span class="go">Coming soon</span>
+        </div>
+        <div class="card soon" aria-disabled="true">
           <span class="tag">IAM</span>
           <h4>Identity and Access Management</h4>
           <p>The approval queue has eight access requests in it. For each, name the model the stated constraint forces and the mechanism that carries it out.</p>
-          <span class="go">Start</span>
-        </a>
+          <span class="go">Coming soon</span>
+        </div>
       </div>
 
       <footer>
@@ -263,6 +296,6 @@
           CompTIA has nothing to do with this. Northwind and everything in these scenarios is made up.
         </p>
       </footer>
-    </div>
+    </main>
   </body>
 </html>

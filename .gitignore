@@ -1,0 +1,11 @@
+# This repository publishes three things and nothing else: index.html, assets/,
+# and the built PBQ pages at the root. Everything listed below is the local
+# build tree. The sources under PBQs/ contain the answer keys in the clear, so
+# none of it may ever be pushed.
+
+PBQs/
+scripts/
+node_modules/
+package.json
+package-lock.json
+BUILD.md

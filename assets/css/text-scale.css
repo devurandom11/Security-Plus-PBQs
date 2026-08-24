@@ -1,0 +1,24 @@
+/* Text scale for every page in this repo.
+   1 = the size the page was designed at. 1.1 = 10% bigger, 0.9 = 10% smaller.
+   Change a number here and every page picks it up. Nothing else needs editing.
+
+   Each page multiplies its own designed size by one of these, so the
+   proportions inside a page stay intact while the whole class of text moves. */
+
+:root {
+  /* Scales everything at once, on top of the per-type numbers below. */
+  --scale-all: 1;
+
+  /* Per type of text. */
+  --scale-body: 1;      /* base UI text: buttons, dropdowns, anything unclassified */
+  --scale-h1: 1;        /* page title in the top bar, score headline */
+  --scale-h2: 1;        /* section headings: Instructions, Answer key */
+  --scale-h3: 1;        /* panel headings and sub-headings */
+  --scale-h4: 1;        /* item headings: a question, a ticket, a certificate */
+  --scale-prose: 1;     /* instruction paragraphs, list items, scenario text */
+  --scale-table: 1;     /* data tables and their column headers */
+  --scale-mono: 1;      /* terminal output, log dumps, certificate text */
+  --scale-small: 1;     /* tags, hints, field labels, badges, captions */
+  --scale-score: 1;     /* the big percentage on the results screen */
+  --scale-diagram: 1;   /* labels drawn inside the SVG diagrams */
+}
