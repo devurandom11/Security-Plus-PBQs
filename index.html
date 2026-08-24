@@ -157,17 +157,16 @@
 
     <div class="wrap">
       <section class="intro">
-        <h2>Twelve exam-style simulations</h2>
+        <h2>Twelve practice PBQs</h2>
         <p>
-          Each exercise below is a self-contained performance based question modeled on the
-          CompTIA Security+ SY0-701 exam. You work a realistic scenario at the fictional
-          Northwind organization: read the briefing and exhibits, fill in the scored fields,
-          then submit for a score with per-item feedback.
+          Each one gives you a job at Northwind, a company that does not exist, with a scenario
+          to read, exhibits to dig through, and fields to fill in. They work the way the
+          performance based questions on the SY0-701 exam do.
         </p>
         <ul>
-          <li>Highlighted yellow fields are scored; gray fields are already configured for you.</li>
-          <li>Each exercise allows three attempts and shows a score with feedback when you submit.</li>
-          <li>Nothing is installed and nothing is sent to a server &mdash; every exercise is a single HTML file that runs in your browser.</li>
+          <li>Yellow fields count toward the score. Gray ones are already set.</li>
+          <li>You get three attempts at each one.</li>
+          <li>Everything runs in your browser. Each exercise is one HTML file, and it never sends anything to a server.</li>
         </ul>
       </section>
 
@@ -176,8 +175,8 @@
         <a class="card" href="pki-chain.html">
           <span class="tag">Certificates</span>
           <h4>PKI and Certificate Validation</h4>
-          <p>Inspect eight exported certificates as <code>openssl x509 -text</code> summaries, build the chains, and decide which ones validate as of the system date.</p>
-          <span class="go">Start exercise</span>
+          <p>The certificate store here has eight exports in it, printed the way <code>openssl x509 -text</code> prints them. Build the chains, then work out which certificates are no good as of the date in the title bar.</p>
+          <span class="go">Start</span>
         </a>
       </div>
 
@@ -186,20 +185,20 @@
         <a class="card" href="attack-mitigation-match.html">
           <span class="tag">Matching</span>
           <h4>Attack and Mitigation Matching</h4>
-          <p>Seven assessment findings sit on the remediation board. Pick the single mitigation technique that best addresses each one &mdash; techniques may repeat or go unused.</p>
-          <span class="go">Start exercise</span>
+          <p>Seven findings from an internal assessment, one dropdown each. A technique can be the answer twice, and some are the answer for nothing, so ticking them off as you go will lead you wrong.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="ticketing-system.html">
           <span class="tag">Help desk</span>
           <h4>Help Desk Ticket Triage</h4>
-          <p>Five open tickets with Tier 1 notes and evidence. Choose the diagnosis, the adversary tactic used against the user, and the mitigation that would have prevented it.</p>
-          <span class="go">Start exercise</span>
+          <p>A Tier 1 tech has already touched all five of these tickets. Say what actually happened on each one, what was pulled on the user, and what would have stopped it.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="system-hardening.html">
           <span class="tag">Hardening</span>
           <h4>Server Hardening Baseline</h4>
-          <p>A Linux application server failed its baseline audit. Read the configuration extracts behind each finding and select the remediation for the hardening plan.</p>
-          <span class="go">Start exercise</span>
+          <p>NW-APP-12 failed its baseline audit, and the auditor attached the config extract behind every finding. Read those, then pick the fix that goes in the hardening plan.</p>
+          <span class="go">Start</span>
         </a>
       </div>
 
@@ -208,26 +207,26 @@
         <a class="card" href="firewall-rules.html">
           <span class="tag">Firewall ACL</span>
           <h4>Firewall Access Control List</h4>
-          <p>Complete the perimeter firewall rule set for the campus network by choosing the source, destination, port, protocol, and action in each scored cell.</p>
-          <span class="go">Start exercise</span>
+          <p>Build the ACL for a new campus perimeter firewall: source, destination, port, protocol, action. Watch the dropdowns. Not every value they offer is one this firewall supports.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="network-diagram.html">
           <span class="tag">Network design</span>
           <h4>Secure Network Design</h4>
-          <p>A site rebuild leaves eight empty control slots on the design drawing. Place a control in each slot, assign every system to a zone, and set the zone-to-zone session policy.</p>
-          <span class="go">Start exercise</span>
+          <p>A site drawing arrives with eight empty control slots. Fill them, put each system in a zone, then decide which zones can open sessions to which.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="wireless-hardening.html">
           <span class="tag">Wireless</span>
           <h4>Enterprise Wireless Hardening</h4>
-          <p>Configure three unconfigured SSIDs on the wireless controller: authentication, encryption, EAP methods, and the supporting network controls.</p>
-          <span class="go">Start exercise</span>
+          <p>The controller has just been rebuilt and all three SSIDs are blank. Set authentication, encryption, EAP, and the network controls sitting behind them.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="bcdr-planning.html">
           <span class="tag">Resilience</span>
           <h4>Resilience and Recovery Planning</h4>
-          <p>Rebuild the recovery plan for four systems that do not matter equally &mdash; backup strategy, site type, and program-wide continuity decisions against fixed RTO and RPO targets.</p>
-          <span class="go">Start exercise</span>
+          <p>Four systems that do not all matter equally. Pick backup storage and a recovery site for each, inside a fixed annual budget, against RTO and RPO targets you do not get to change.</p>
+          <span class="go">Start</span>
         </a>
       </div>
 
@@ -236,32 +235,32 @@
         <a class="card" href="log-analysis.html">
           <span class="tag">Log analysis</span>
           <h4>Security Log Analysis</h4>
-          <p>Five log sources collected onto an analyst jump host describe a single intrusion. Read them in the console and answer the investigation questions.</p>
-          <span class="go">Start exercise</span>
+          <p>Someone has pulled five log sources onto the analyst jump host. They all describe the same intrusion. Read them in the console and answer what happened.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="ids-alert-triage.html">
           <span class="tag">SOC triage</span>
           <h4>Alert Triage and Tuning</h4>
-          <p>Eight alerts in the intrusion detection queue. Classify each detection, decide the response, tune the two noisiest rules, and pick the escalation.</p>
-          <span class="go">Start exercise</span>
+          <p>Eight alerts are waiting in the IDS queue. Say what each detection was and what you do with it, tune the two rules making the most noise, and pick the one you escalate first.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="incident-response-order.html">
           <span class="tag">Incident response</span>
           <h4>Incident Response Process</h4>
-          <p>Order the seven phases of the incident response process, then map the actions taken during a ransomware staging attempt to the phase they belong to.</p>
-          <span class="go">Start exercise</span>
+          <p>Put the seven steps in the order the process actually runs. Then take eight actions out of a ransomware after-action package and say which step each one belonged to.</p>
+          <span class="go">Start</span>
         </a>
         <a class="card" href="auth-methods.html">
           <span class="tag">IAM</span>
           <h4>Identity and Access Management</h4>
-          <p>Eight access requests are queued for the review board. For each, record the access control model the constraint forces and the implementation detail that carries it out.</p>
-          <span class="go">Start exercise</span>
+          <p>The approval queue has eight access requests in it. For each, name the model the stated constraint forces and the mechanism that carries it out.</p>
+          <span class="go">Start</span>
         </a>
       </div>
 
       <footer>
         <p>
-          Not affiliated with or endorsed by CompTIA. Northwind and all scenarios are fictional.
+          CompTIA has nothing to do with this. Northwind and everything in these scenarios is made up.
         </p>
       </footer>
     </div>
