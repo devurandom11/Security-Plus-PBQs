@@ -352,9 +352,23 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
+    .skip {
+      position: absolute;
+      left: 8px;
+      top: -48px;
+      z-index: 30;
+      padding: 8px 12px;
+      background: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .skip:focus { top: 8px; }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to the diagram</a>
   <section id="exam" class="screen active">
     <header class="topbar">
       <h1 class="brand" id="examTitle" tabindex="-1">Secure network design <small id="attemptLabel">Attempt 1 of 3</small></h1>
@@ -376,7 +390,7 @@
         <p>Nine placements are scored (seven slots and two servers) and each correct placement earns one point. You have three attempts. The answer key and completed drawing appear after a perfect score or after the third attempt.</p>
       </aside>
 
-      <main class="main">
+      <main class="main" id="main">
         <div class="panel">
           <h3>Drag these onto the drawing</h3>
           <div class="panel-body">

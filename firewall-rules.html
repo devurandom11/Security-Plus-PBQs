@@ -267,9 +267,23 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
+    .skip {
+      position: absolute;
+      left: 8px;
+      top: -48px;
+      z-index: 30;
+      padding: 8px 12px;
+      background: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .skip:focus { top: 8px; }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to the rule table</a>
   <section id="exam" class="screen active">
     <header class="topbar" role="banner">
       <h1 class="brand" id="examTitle" tabindex="-1">Firewall rules <small id="attemptLabel">Attempt 1 of 3</small></h1>
@@ -290,7 +304,7 @@
         <p>Every yellow cell is scored, one point each, and partial credit applies. You have three attempts. The answer key and explanations appear after a perfect score or after the third attempt.</p>
       </aside>
 
-      <main class="main">
+      <main class="main" id="main">
         <div class="panel">
           <h3>Network topology</h3>
           <div class="panel-body">
