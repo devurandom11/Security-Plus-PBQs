@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Security+ SY0-701 Performance Based Questions</title>
-    <meta name="description" content="Interactive performance based questions to prepare for the CompTIA Security+ SY0-701 exam." />
+    <meta
+      name="description"
+      content="Interactive performance based questions to prepare for the CompTIA Security+ SY0-701 exam."
+    />
     <link rel="stylesheet" href="assets/css/text-scale.css" />
     <style>
       :root {
@@ -16,11 +19,13 @@
         --white: #ffffff;
         --gold: #fff4cc;
         --info: #1d4e89;
-        --shadow: 0 10px 30px rgba(13, 33, 55, .18);
+        --shadow: 0 10px 30px rgba(13, 33, 55, 0.18);
         --focus: #7766cc;
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         color: var(--ink);
@@ -29,7 +34,9 @@
         font-size: calc(16px * var(--scale-body, 1) * var(--scale-all, 1));
         line-height: 1.5;
       }
-      a { color: var(--info); }
+      a {
+        color: var(--info);
+      }
       :focus-visible {
         outline: 3px solid var(--focus);
         outline-offset: 2px;
@@ -49,14 +56,32 @@
         font-size: calc(17px * var(--scale-h1, 1) * var(--scale-all, 1));
         font-weight: 700;
         color: #fff;
-        letter-spacing: .04em;
+        letter-spacing: 0.04em;
       }
-      .brand small { font-weight: 500; color: #9db4cc; margin-left: 8px; letter-spacing: 0; }
-      .spacer { flex: 1; }
-      .topbar a { color: #b7c9dd; font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1)); text-decoration: none; }
-      .topbar a:hover { color: #fff; text-decoration: underline; }
+      .brand small {
+        font-weight: 500;
+        color: #9db4cc;
+        margin-left: 8px;
+        letter-spacing: 0;
+      }
+      .spacer {
+        flex: 1;
+      }
+      .topbar a {
+        color: #b7c9dd;
+        font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1));
+        text-decoration: none;
+      }
+      .topbar a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
 
-      .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 48px; }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 24px 16px 48px;
+      }
 
       .intro {
         background: var(--white);
@@ -65,18 +90,31 @@
         border-radius: 8px;
         padding: 16px 18px;
         margin-bottom: 28px;
-        box-shadow: 0 1px 2px rgba(13, 33, 55, .06);
+        box-shadow: 0 1px 2px rgba(13, 33, 55, 0.06);
       }
-      .intro h2 { margin: 0 0 8px; font-size: calc(19px * var(--scale-h2, 1) * var(--scale-all, 1)); }
-      .intro p { margin: 8px 0 0; max-width: 72ch; }
-      .intro p:first-of-type { margin-top: 0; }
-      .intro ul { margin: 10px 0 0; padding-left: 18px; }
-      .intro li { margin: 4px 0; }
+      .intro h2 {
+        margin: 0 0 8px;
+        font-size: calc(19px * var(--scale-h2, 1) * var(--scale-all, 1));
+      }
+      .intro p {
+        margin: 8px 0 0;
+        max-width: 72ch;
+      }
+      .intro p:first-of-type {
+        margin-top: 0;
+      }
+      .intro ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+      .intro li {
+        margin: 4px 0;
+      }
 
       h3.domain {
         margin: 28px 0 12px;
         font-size: calc(14px * var(--scale-h3, 1) * var(--scale-all, 1));
-        letter-spacing: .06em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--muted);
         border-bottom: 1px solid var(--line);
@@ -98,7 +136,10 @@
         padding: 14px 16px 16px;
         text-decoration: none;
         color: inherit;
-        transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+        transition:
+          transform 0.12s ease,
+          box-shadow 0.12s ease,
+          border-color 0.12s ease;
       }
       .card:hover,
       .card:focus-visible {
@@ -122,7 +163,9 @@
         font-weight: 650;
         color: var(--info);
       }
-      .card .go::after { content: " \2192"; }
+      .card .go::after {
+        content: " \2192";
+      }
       .tag {
         display: inline-block;
         align-self: flex-start;
@@ -132,7 +175,7 @@
         background: var(--gold);
         border: 1px solid #e6d69a;
         font-size: calc(13px * var(--scale-small, 1) * var(--scale-all, 1));
-        letter-spacing: .05em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #6b5713;
       }
@@ -149,10 +192,20 @@
         border-style: dashed;
         color: var(--muted);
       }
-      .card.soon h4 { color: #33404e; }
-      .card.soon .go { color: var(--muted); }
-      .card.soon .go::after { content: ""; }
-      .card.soon .tag { background: #e8edf3; border-color: #cfd6de; color: #33404e; }
+      .card.soon h4 {
+        color: #33404e;
+      }
+      .card.soon .go {
+        color: var(--muted);
+      }
+      .card.soon .go::after {
+        content: "";
+      }
+      .card.soon .tag {
+        background: #e8edf3;
+        border-color: #cfd6de;
+        color: #33404e;
+      }
       .skip {
         position: absolute;
         left: -999px;
@@ -163,14 +216,23 @@
         border-radius: 6px;
         z-index: 10;
       }
-      .skip:focus { left: 8px; }
+      .skip:focus {
+        left: 8px;
+      }
       @media (prefers-reduced-motion: reduce) {
-        .card { transition: none; }
-        .card:hover, .card:focus-visible { transform: none; }
+        .card {
+          transition: none;
+        }
+        .card:hover,
+        .card:focus-visible {
+          transform: none;
+        }
       }
 
       @media (max-width: 520px) {
-        .wrap { padding: 18px 12px 36px; }
+        .wrap {
+          padding: 18px 12px 36px;
+        }
       }
     </style>
   </head>
@@ -178,23 +240,39 @@
   <body>
     <a class="skip" href="#main">Skip to exercises</a>
     <header class="topbar" role="banner">
-      <h1 class="brand">Security+ SY0-701 <small>Performance Based Questions</small></h1>
+      <h1 class="brand">
+        Security+ SY0-701 <small>Performance Based Questions</small>
+      </h1>
       <span class="spacer"></span>
-      <a href="https://github.com/devurandom11/Security-Plus-PBQs">View on GitHub</a>
+      <a href="https://github.com/devurandom11/Security-Plus-PBQs"
+        >View on GitHub</a
+      >
     </header>
 
     <main id="main" class="wrap">
       <section class="intro" aria-labelledby="introTitle">
         <h2 id="introTitle">Practice PBQs</h2>
         <p>
-          Interactive exercises that work the way the performance based questions on the SY0-701
-          exam do: a short scenario, a drawing or console to work in, and a scored task. The
-          scenarios are set at Northwind, a company that does not exist.
+          Interactive exercises that work the way the performance based
+          questions on the SY0-701 exam do: a short scenario, a drawing or
+          console to work in, and a scored task. The scenarios are set at
+          Northwind, a ficticious company.
         </p>
         <ul>
-          <li>Two exercises are open now. The others are being reworked and will open as they are ready.</li>
-          <li>You get three attempts at each exercise, then the answer key and explanations.</li>
-          <li>Everything runs in your browser. Each exercise is a single HTML file and never sends anything to a server.</li>
+          <li>
+            Two exercises are open now. The others are being developed and will
+            open as they are ready.
+          </li>
+          <li>
+            You get three attempts at each exercise, followed by an answer key
+            and explanations.
+          </li>
+          <li>
+            To get the most our of these exercises, treat them as you would on
+            the actual exam. Make your best attempt first, without reviewing any
+            notes, then study the answer key and explanations thouroughly for
+            any concepts that were difficult.
+          </li>
         </ul>
       </section>
 
@@ -203,13 +281,21 @@
         <a class="card" href="network-diagram.html">
           <span class="tag">Network design</span>
           <h4>Secure Network Design</h4>
-          <p>A site drawing arrives with seven empty slots. Drag the right security device into each one, then place two servers in the correct network segments.</p>
+          <p>
+            A site drawing arrives with seven empty slots. Drag the right
+            security device into each one, then place two servers in the correct
+            network segments.
+          </p>
           <span class="go">Start</span>
         </a>
         <a class="card" href="firewall-rules.html">
           <span class="tag">Firewall ACL</span>
           <h4>Firewall Access Control List</h4>
-          <p>Build the ACL for a new campus perimeter firewall: source, destination, port, protocol, action. Watch the dropdowns. Not every value they offer is one this firewall supports.</p>
+          <p>
+            Build the ACL for a new campus perimeter firewall: source,
+            destination, port, protocol, action. Watch the dropdowns. Not every
+            value they offer is one this firewall supports.
+          </p>
           <span class="go">Start</span>
         </a>
       </div>
@@ -219,29 +305,48 @@
         <div class="card soon" aria-disabled="true">
           <span class="tag">Certificates</span>
           <h4>PKI and Certificate Validation</h4>
-          <p>The certificate store here has eight exports in it, printed the way <code>openssl x509 -text</code> prints them. Build the chains, then work out which certificates are no good as of the date in the title bar.</p>
+          <p>
+            The certificate store here has eight exports in it, printed the way
+            <code>openssl x509 -text</code> prints them. Build the chains, then
+            work out which certificates are no good as of the date in the title
+            bar.
+          </p>
           <span class="go">Coming soon</span>
         </div>
       </div>
 
-      <h3 class="domain">Coming soon &mdash; Threats, Vulnerabilities and Mitigations</h3>
+      <h3 class="domain">
+        Coming soon &mdash; Threats, Vulnerabilities and Mitigations
+      </h3>
       <div class="grid">
         <div class="card soon" aria-disabled="true">
           <span class="tag">Matching</span>
           <h4>Attack and Mitigation Matching</h4>
-          <p>Seven findings from an internal assessment, one dropdown each. A technique can be the answer twice, and some are the answer for nothing, so ticking them off as you go will lead you wrong.</p>
+          <p>
+            Seven findings from an internal assessment, one dropdown each. A
+            technique can be the answer twice, and some are the answer for
+            nothing, so ticking them off as you go will lead you wrong.
+          </p>
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
           <span class="tag">Help desk</span>
           <h4>Help Desk Ticket Triage</h4>
-          <p>A Tier 1 tech has already touched all five of these tickets. Say what actually happened on each one, what was pulled on the user, and what would have stopped it.</p>
+          <p>
+            A Tier 1 tech has already touched all five of these tickets. Say
+            what actually happened on each one, what was pulled on the user, and
+            what would have stopped it.
+          </p>
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
           <span class="tag">Hardening</span>
           <h4>Server Hardening Baseline</h4>
-          <p>NW-APP-12 failed its baseline audit, and the auditor attached the config extract behind every finding. Read those, then pick the fix that goes in the hardening plan.</p>
+          <p>
+            NW-APP-12 failed its baseline audit, and the auditor attached the
+            config extract behind every finding. Read those, then pick the fix
+            that goes in the hardening plan.
+          </p>
           <span class="go">Coming soon</span>
         </div>
       </div>
@@ -251,13 +356,21 @@
         <div class="card soon" aria-disabled="true">
           <span class="tag">Wireless</span>
           <h4>Enterprise Wireless Hardening</h4>
-          <p>The controller has just been rebuilt and all three SSIDs are blank. Set authentication, encryption, EAP, and the network controls sitting behind them.</p>
+          <p>
+            The controller has just been rebuilt and all three SSIDs are blank.
+            Set authentication, encryption, EAP, and the network controls
+            sitting behind them.
+          </p>
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
           <span class="tag">Resilience</span>
           <h4>Resilience and Recovery Planning</h4>
-          <p>Four systems that do not all matter equally. Pick backup storage and a recovery site for each, inside a fixed annual budget, against RTO and RPO targets you do not get to change.</p>
+          <p>
+            Four systems that do not all matter equally. Pick backup storage and
+            a recovery site for each, inside a fixed annual budget, against RTO
+            and RPO targets you do not get to change.
+          </p>
           <span class="go">Coming soon</span>
         </div>
       </div>
@@ -267,32 +380,49 @@
         <div class="card soon" aria-disabled="true">
           <span class="tag">Log analysis</span>
           <h4>Security Log Analysis</h4>
-          <p>Someone has pulled five log sources onto the analyst jump host. They all describe the same intrusion. Read them in the console and answer what happened.</p>
+          <p>
+            Someone has pulled five log sources onto the analyst jump host. They
+            all describe the same intrusion. Read them in the console and answer
+            what happened.
+          </p>
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
           <span class="tag">SOC triage</span>
           <h4>Alert Triage and Tuning</h4>
-          <p>Eight alerts are waiting in the IDS queue. Say what each detection was and what you do with it, tune the two rules making the most noise, and pick the one you escalate first.</p>
+          <p>
+            Eight alerts are waiting in the IDS queue. Say what each detection
+            was and what you do with it, tune the two rules making the most
+            noise, and pick the one you escalate first.
+          </p>
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
           <span class="tag">Incident response</span>
           <h4>Incident Response Process</h4>
-          <p>Put the seven steps in the order the process actually runs. Then take eight actions out of a ransomware after-action package and say which step each one belonged to.</p>
+          <p>
+            Put the seven steps in the order the process actually runs. Then
+            take eight actions out of a ransomware after-action package and say
+            which step each one belonged to.
+          </p>
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
           <span class="tag">IAM</span>
           <h4>Identity and Access Management</h4>
-          <p>The approval queue has eight access requests in it. For each, name the model the stated constraint forces and the mechanism that carries it out.</p>
+          <p>
+            The approval queue has eight access requests in it. For each, name
+            the model the stated constraint forces and the mechanism that
+            carries it out.
+          </p>
           <span class="go">Coming soon</span>
         </div>
       </div>
 
       <footer>
         <p>
-          CompTIA has nothing to do with this. Northwind and everything in these scenarios is made up.
+          This site is not associated or endorcsed by CompTIA. Northwind and
+          everything in these scenarios is made up.
         </p>
       </footer>
     </main>
