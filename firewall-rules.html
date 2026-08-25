@@ -34,7 +34,7 @@
     }
     button, select { font: inherit; }
     button { cursor: pointer; }
-    code, .mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+    code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
     :focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 2px;
@@ -224,22 +224,6 @@
     .modal-body .sc-list { margin: 0; padding-left: 22px; }
     .modal-body .sc-list li { margin: 8px 0; font-size: calc(16px * var(--scale-prose, 1) * var(--scale-all, 1)); }
     .table-wrap { overflow-x: auto; }
-    table.key {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: calc(15px * var(--scale-table, 1) * var(--scale-all, 1));
-    }
-    table.key th, table.key td {
-      border: 1px solid #b7c2ce;
-      padding: 7px 8px;
-      text-align: left;
-    }
-    table.key thead th {
-      background: #d9e2ec;
-      font-size: calc(13px * var(--scale-table, 1) * var(--scale-all, 1));
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
 
     .results-wrap {
       width: min(1000px, 100%);
