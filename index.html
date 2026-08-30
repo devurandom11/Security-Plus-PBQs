@@ -157,8 +157,19 @@
         font-size: calc(16px * var(--scale-prose, 1) * var(--scale-all, 1));
         color: var(--muted);
       }
-      .card .go {
+      .card .obj {
         margin-top: auto;
+        padding-top: 10px;
+        border-top: 1px solid #e3e8ee;
+        font-size: calc(13px * var(--scale-small, 1) * var(--scale-all, 1));
+        color: var(--muted);
+      }
+      .card .obj strong {
+        font-weight: 650;
+        color: var(--navy);
+      }
+      .card .go {
+        margin-top: 8px;
         font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1));
         font-weight: 650;
         color: var(--info);
@@ -204,6 +215,9 @@
       .card.soon .tag {
         background: #e8edf3;
         border-color: #cfd6de;
+        color: #33404e;
+      }
+      .card.soon .obj strong {
         color: #33404e;
       }
       .skip {
@@ -286,6 +300,10 @@
             security device into each one, then place two servers in the correct
             network segments.
           </p>
+          <span class="obj"
+            ><strong>Objective 3.2:</strong> Apply security principles to
+            secure enterprise infrastructure</span
+          >
           <span class="go">Start</span>
         </a>
         <a class="card" href="firewall-rules.html">
@@ -296,11 +314,15 @@
             destination, port, protocol, action. Watch the dropdowns. Not every
             value they offer is one this firewall supports.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.5:</strong> Modify enterprise
+            capabilities to enhance security</span
+          >
           <span class="go">Start</span>
         </a>
       </div>
 
-      <h3 class="domain">Coming soon &mdash; General Security Concepts</h3>
+      <h3 class="domain">Coming soon</h3>
       <div class="grid">
         <div class="card soon" aria-disabled="true">
           <span class="tag">Certificates</span>
@@ -311,14 +333,12 @@
             work out which certificates are no good as of the date in the title
             bar.
           </p>
+          <span class="obj"
+            ><strong>Objective 1.4:</strong> Use appropriate
+            cryptographic solutions</span
+          >
           <span class="go">Coming soon</span>
         </div>
-      </div>
-
-      <h3 class="domain">
-        Coming soon &mdash; Threats, Vulnerabilities and Mitigations
-      </h3>
-      <div class="grid">
         <div class="card soon" aria-disabled="true">
           <span class="tag">Matching</span>
           <h4>Attack and Mitigation Matching</h4>
@@ -327,6 +347,10 @@
             technique can be the answer twice, and some are the answer for
             nothing, so ticking them off as you go will lead you wrong.
           </p>
+          <span class="obj"
+            ><strong>Objectives 2.4 &amp; 2.5:</strong> Analyze
+            indicators of malicious activity; mitigation techniques</span
+          >
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
@@ -337,6 +361,10 @@
             what actually happened on each one, what was pulled on the user, and
             what would have stopped it.
           </p>
+          <span class="obj"
+            ><strong>Objectives 2.2 &amp; 2.5:</strong> Threat vectors
+            and attack surfaces; mitigation techniques</span
+          >
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
@@ -347,12 +375,12 @@
             config extract behind every finding. Read those, then pick the fix
             that goes in the hardening plan.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.1:</strong> Apply common security
+            techniques to computing resources</span
+          >
           <span class="go">Coming soon</span>
         </div>
-      </div>
-
-      <h3 class="domain">Coming soon &mdash; Security Architecture</h3>
-      <div class="grid">
         <div class="card soon" aria-disabled="true">
           <span class="tag">Wireless</span>
           <h4>Enterprise Wireless Hardening</h4>
@@ -361,6 +389,10 @@
             Set authentication, encryption, EAP, and the network controls
             sitting behind them.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.1:</strong> Apply common security
+            techniques to computing resources</span
+          >
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
@@ -371,12 +403,12 @@
             a recovery site for each, inside a fixed annual budget, against RTO
             and RPO targets you do not get to change.
           </p>
+          <span class="obj"
+            ><strong>Objective 3.4:</strong> Resilience and recovery in
+            security architecture</span
+          >
           <span class="go">Coming soon</span>
         </div>
-      </div>
-
-      <h3 class="domain">Coming soon &mdash; Security Operations</h3>
-      <div class="grid">
         <div class="card soon" aria-disabled="true">
           <span class="tag">Log analysis</span>
           <h4>Security Log Analysis</h4>
@@ -385,6 +417,10 @@
             all describe the same intrusion. Read them in the console and answer
             what happened.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.9:</strong> Use data sources to support
+            an investigation</span
+          >
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
@@ -395,6 +431,10 @@
             was and what you do with it, tune the two rules making the most
             noise, and pick the one you escalate first.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.4:</strong> Security alerting and
+            monitoring concepts and tools</span
+          >
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
@@ -405,6 +445,10 @@
             take eight actions out of a ransomware after-action package and say
             which step each one belonged to.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.8:</strong> Appropriate incident
+            response activities</span
+          >
           <span class="go">Coming soon</span>
         </div>
         <div class="card soon" aria-disabled="true">
@@ -415,6 +459,10 @@
             the model the stated constraint forces and the mechanism that
             carries it out.
           </p>
+          <span class="obj"
+            ><strong>Objective 4.6:</strong> Implement and maintain
+            identity and access management</span
+          >
           <span class="go">Coming soon</span>
         </div>
       </div>
