@@ -123,7 +123,7 @@
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
         gap: 14px;
       }
 
@@ -252,7 +252,7 @@
   </head>
 
   <body>
-    <a class="skip" href="#main">Skip to exercises</a>
+    <a class="skip" href="#main">Skip to main content</a>
     <header class="topbar" role="banner">
       <h1 class="brand">
         Security+ SY0-701 <small>Performance Based Questions</small>
@@ -263,7 +263,7 @@
       >
     </header>
 
-    <main id="main" class="wrap">
+    <main id="main" class="wrap" tabindex="-1">
       <section class="intro" aria-labelledby="introTitle">
         <h2 id="introTitle">Practice PBQs</h2>
         <p>
@@ -292,9 +292,9 @@
 
       <h3 class="domain">Available now</h3>
       <div class="grid">
-        <a class="card" href="network-diagram.html">
+        <a class="card" href="network-diagram.html" aria-labelledby="cardNetworkDiagram">
           <span class="tag">Network design</span>
-          <h4>Secure Network Design</h4>
+          <h4 id="cardNetworkDiagram">Secure Network Design</h4>
           <p>
             A site drawing arrives with seven empty slots. Drag the right
             security device into each one, then place two servers in the correct
@@ -306,9 +306,9 @@
           >
           <span class="go">Start</span>
         </a>
-        <a class="card" href="firewall-rules.html">
+        <a class="card" href="firewall-rules.html" aria-labelledby="cardFirewallRules">
           <span class="tag">Firewall ACL</span>
-          <h4>Firewall Access Control List</h4>
+          <h4 id="cardFirewallRules">Firewall Access Control List</h4>
           <p>
             Build the ACL for a new campus perimeter firewall: source,
             destination, port, protocol, action. Watch the dropdowns. Not every
@@ -324,7 +324,7 @@
 
       <h3 class="domain">Coming soon</h3>
       <div class="grid">
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Certificates</span>
           <h4>PKI and Certificate Validation</h4>
           <p>
@@ -339,7 +339,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Matching</span>
           <h4>Attack and Mitigation Matching</h4>
           <p>
@@ -353,7 +353,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Help desk</span>
           <h4>Help Desk Ticket Triage</h4>
           <p>
@@ -367,7 +367,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Hardening</span>
           <h4>Server Hardening Baseline</h4>
           <p>
@@ -381,7 +381,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Wireless</span>
           <h4>Enterprise Wireless Hardening</h4>
           <p>
@@ -395,7 +395,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Resilience</span>
           <h4>Resilience and Recovery Planning</h4>
           <p>
@@ -409,7 +409,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Log analysis</span>
           <h4>Security Log Analysis</h4>
           <p>
@@ -423,7 +423,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">SOC triage</span>
           <h4>Alert Triage and Tuning</h4>
           <p>
@@ -437,7 +437,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">Incident response</span>
           <h4>Incident Response Process</h4>
           <p>
@@ -451,7 +451,7 @@
           >
           <span class="go">Coming soon</span>
         </div>
-        <div class="card soon" aria-disabled="true">
+        <div class="card soon">
           <span class="tag">IAM</span>
           <h4>Identity and Access Management</h4>
           <p>
