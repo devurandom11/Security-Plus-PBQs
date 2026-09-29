@@ -198,28 +198,6 @@
         font-size: calc(15px * var(--scale-body, 1) * var(--scale-all, 1));
         color: var(--muted);
       }
-      .card.soon {
-        background: #f7f9fb;
-        border-style: dashed;
-        color: var(--muted);
-      }
-      .card.soon h4 {
-        color: #33404e;
-      }
-      .card.soon .go {
-        color: var(--muted);
-      }
-      .card.soon .go::after {
-        content: "";
-      }
-      .card.soon .tag {
-        background: #e8edf3;
-        border-color: #cfd6de;
-        color: #33404e;
-      }
-      .card.soon .obj strong {
-        color: #33404e;
-      }
       .skip {
         position: absolute;
         left: -999px;
@@ -274,12 +252,11 @@
         </p>
         <ul>
           <li>
-            Two exercises are open now. The others are being developed and will
-            open as they are ready.
+            Twelve exercises are available. Choose one below to start.
           </li>
           <li>
-            You get three attempts at each exercise, followed by an answer key
-            and explanations.
+            You get three attempts at each exercise. The answer key and
+            explanations appear after a perfect score or your third attempt.
           </li>
           <li>
             To get the most out of these exercises, treat them as you would on
@@ -320,72 +297,68 @@
           >
           <span class="go">Start</span>
         </a>
-      </div>
 
-      <h3 class="domain">Coming soon</h3>
-      <div class="grid">
-        <div class="card soon">
+        <a class="card" href="pki-chain.html" aria-labelledby="cardPkiChain">
           <span class="tag">Certificates</span>
-          <h4>PKI and Certificate Validation</h4>
+          <h4 id="cardPkiChain">PKI and Certificate Validation</h4>
           <p>
-            The certificate store here has eight exports in it, printed the way
-            <code>openssl x509 -text</code> prints them. Build the chains, then
-            work out which certificates are no good as of the date in the title
-            bar.
+            Inspect eight certificate summaries. Build the portal's chain of
+            trust, then diagnose four failed validations and choose a
+            remediation for each using the stated system date.
           </p>
           <span class="obj"
             ><strong>Objective 1.4:</strong> Use appropriate
             cryptographic solutions</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="attack-mitigation-match.html" aria-labelledby="cardAttackMitigationMatch">
           <span class="tag">Matching</span>
-          <h4>Attack and Mitigation Matching</h4>
+          <h4 id="cardAttackMitigationMatch">Attack and Mitigation Matching</h4>
           <p>
-            Seven findings from an internal assessment, one dropdown each. A
-            technique can be the answer twice, and some are the answer for
-            nothing, so ticking them off as you go will lead you wrong.
+            Seven findings from an annual assessment, one dropdown each.
+            Choose the most effective mitigation under each finding's
+            constraints. Some techniques will not be used.
           </p>
           <span class="obj"
-            ><strong>Objectives 2.4 &amp; 2.5:</strong> Analyze
-            indicators of malicious activity; mitigation techniques</span
+            ><strong>Objective 2.5:</strong> Mitigation techniques to
+            secure the enterprise</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="ticketing-system.html" aria-labelledby="cardTicketingSystem">
           <span class="tag">Help desk</span>
-          <h4>Help Desk Ticket Triage</h4>
+          <h4 id="cardTicketingSystem">Help Desk Ticket Triage</h4>
           <p>
-            A Tier 1 tech has already touched all five of these tickets. Say
-            what actually happened on each one, what was pulled on the user, and
-            what would have stopped it.
+            Review four help desk tickets about suspected social engineering.
+            Identify each attack, the tactic used to influence the user, and
+            the control that addresses the weakness in the evidence.
           </p>
           <span class="obj"
-            ><strong>Objectives 2.2 &amp; 2.5:</strong> Threat vectors
-            and attack surfaces; mitigation techniques</span
+            ><strong>Objective 2.2:</strong> Threat vectors and
+            attack surfaces</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="system-hardening.html" aria-labelledby="cardSystemHardening">
           <span class="tag">Hardening</span>
-          <h4>Server Hardening Baseline</h4>
+          <h4 id="cardSystemHardening">Server Hardening Baseline</h4>
           <p>
             NW-APP-12 failed its baseline audit, and the auditor attached the
-            config extract behind every finding. Read those, then pick the fix
+            config extract behind every finding. Read it, then pick the fix
             that goes in the hardening plan.
           </p>
           <span class="obj"
             ><strong>Objective 4.1:</strong> Apply common security
             techniques to computing resources</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="wireless-hardening.html" aria-labelledby="cardWirelessHardening">
           <span class="tag">Wireless</span>
-          <h4>Enterprise Wireless Hardening</h4>
+          <h4 id="cardWirelessHardening">Enterprise Wireless Hardening</h4>
           <p>
-            The controller has just been rebuilt and all three SSIDs are blank.
+            The controller has just been rebuilt and three SSIDs need configuring.
             Set authentication, encryption, EAP, and the network controls
             sitting behind them.
           </p>
@@ -393,78 +366,78 @@
             ><strong>Objective 4.1:</strong> Apply common security
             techniques to computing resources</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="bcdr-planning.html" aria-labelledby="cardBcdrPlanning">
           <span class="tag">Resilience</span>
-          <h4>Resilience and Recovery Planning</h4>
+          <h4 id="cardBcdrPlanning">Resilience and Recovery Planning</h4>
           <p>
-            Four systems that do not all matter equally. Pick backup storage and
-            a recovery site for each, inside a fixed annual budget, against RTO
-            and RPO targets you do not get to change.
+            Four systems with fixed RTO and RPO targets. Choose a recovery
+            site, backup frequency, and high availability approach for each
+            at the lowest cost that meets its requirements.
           </p>
           <span class="obj"
             ><strong>Objective 3.4:</strong> Resilience and recovery in
             security architecture</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="log-analysis.html" aria-labelledby="cardLogAnalysis">
           <span class="tag">Log analysis</span>
-          <h4>Security Log Analysis</h4>
+          <h4 id="cardLogAnalysis">Security Log Analysis</h4>
           <p>
-            Someone has pulled five log sources onto the analyst jump host. They
-            all describe the same intrusion. Read them in the console and answer
-            what happened.
+            Correlate four log excerpts to trace an intrusion from a public
+            portal to data exfiltration. Separate the evidence of compromise
+            from normal activity and unrelated scanning.
           </p>
           <span class="obj"
             ><strong>Objective 4.9:</strong> Use data sources to support
             an investigation</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="ids-alert-triage.html" aria-labelledby="cardIdsAlertTriage">
           <span class="tag">SOC triage</span>
-          <h4>Alert Triage and Tuning</h4>
+          <h4 id="cardIdsAlertTriage">Alert Triage and Tuning</h4>
           <p>
-            Eight alerts are waiting in the IDS queue. Say what each detection
-            was and what you do with it, tune the two rules making the most
-            noise, and pick the one you escalate first.
+            Five alerts from the IDS, endpoint agent, and WAF are waiting.
+            Classify each detection, choose a response, and select a tuning
+            change for the noisiest rule.
           </p>
           <span class="obj"
             ><strong>Objective 4.4:</strong> Security alerting and
             monitoring concepts and tools</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="incident-response-order.html" aria-labelledby="cardIncidentResponseOrder">
           <span class="tag">Incident response</span>
-          <h4>Incident Response Process</h4>
+          <h4 id="cardIncidentResponseOrder">Incident Response Process</h4>
           <p>
-            Put the seven steps in the order the process actually runs. Then
-            take eight actions out of a ransomware after-action package and say
+            Put the seven steps in SY0-701 order. Then
+            take six actions out of a ransomware after-action package and say
             which step each one belonged to.
           </p>
           <span class="obj"
             ><strong>Objective 4.8:</strong> Appropriate incident
             response activities</span
           >
-          <span class="go">Coming soon</span>
-        </div>
-        <div class="card soon">
+          <span class="go">Start</span>
+        </a>
+        <a class="card" href="auth-methods.html" aria-labelledby="cardAuthMethods">
           <span class="tag">IAM</span>
-          <h4>Identity and Access Management</h4>
+          <h4 id="cardAuthMethods">Identity and Access Management</h4>
           <p>
-            The approval queue has eight access requests in it. For each, name
-            the model the stated constraint forces and the mechanism that
-            carries it out.
+            Review six access requests. For each, choose the access control
+            model or identity mechanism that meets the stated constraint and
+            the implementation detail that carries it out.
           </p>
           <span class="obj"
             ><strong>Objective 4.6:</strong> Implement and maintain
             identity and access management</span
           >
-          <span class="go">Coming soon</span>
-        </div>
+          <span class="go">Start</span>
+        </a>
       </div>
 
       <footer>
